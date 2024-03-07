@@ -2,18 +2,11 @@ import React, { Fragment } from 'react';
 import "./css/index.css";
 import { Link } from 'react-router-dom';
 type Props = {
-    ChangeData: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    LoginSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
-    isError: {
-        nickNameErr: string;
-        passwordErr: string;
-    }
+
 
 }
 const Login = ({
-    ChangeData,
-    LoginSubmit,
-    isError
+
 }: Props) => {
     return (
         <main className='login-page'>
@@ -24,7 +17,6 @@ const Login = ({
                         {accountArr.map((item, idx) => (
                             <Fragment>
                                 <input
-                                    onChange={ChangeData}
                                     key={idx}
                                     name={item.name}
                                     type={item.type}
@@ -34,10 +26,9 @@ const Login = ({
                                 />
                             </Fragment>
                         ))}
-                        <button className='login-button' onClick={LoginSubmit}>회원가입</button>
+                        <button className='login-button' >회원가입</button>
                     </form>
-                    {isError.nickNameErr && <div className='err-msg'>{isError.nickNameErr}</div>}
-                    {isError.passwordErr && <div className='err-msg'>{isError.passwordErr}</div>}
+
                     <div className='account-link'>
                         <Link to={'/account'} >회원가입 하러가기 &rarr;</Link>
                     </div>

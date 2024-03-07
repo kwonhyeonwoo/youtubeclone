@@ -4,20 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
-    ChangeData: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    AccountSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
-    isError: {
-        passwordErr: string;
-        nickNameErr: string;
-        emailErr: string;
-    }
-    viewAvatar: string;
+
 }
 const Account = ({
-    ChangeData,
-    AccountSubmit,
-    isError,
-    // viewAvatar,
+
 }: Props) => {
     return (
         <main className='account-page'>
@@ -31,7 +21,6 @@ const Account = ({
                         {accountArr.map((item, idx) => (
                             <Fragment>
                                 <input
-                                    onChange={ChangeData}
                                     id={item.id}
                                     key={idx}
                                     name={item.name}
@@ -42,9 +31,8 @@ const Account = ({
                                 />
                             </Fragment>
                         ))}
-                        <button className='account-button' onClick={AccountSubmit}>회원가입</button>
-                        {isError.emailErr && <div className='err-msg'>{isError.emailErr}</div>}
-                        {isError.nickNameErr && <div className='err-msg'>{isError.nickNameErr}</div>}
+                        <button className='account-button' >회원가입</button>
+
                     </form>
                 </div>
             </section>
