@@ -7,8 +7,8 @@ type Account = {
     passwordCheck: string;
 }
 
-const useAuthChange = ()=>{
-    const [authData, setAuthData] = useState <Account>({
+const useAuthChange = () => {
+    const [authData, setAuthData] = useState<Account>({
         name: "",
         nickName: "",
         email: "",
@@ -26,17 +26,16 @@ const useAuthChange = ()=>{
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value, files, name } = event.target;
         const fileReader = new FileReader();
-
-        if (name === 'avatar' && files && files.length > 0) {
-            setselectedFile(files[0])
-            fileReader.readAsDataURL(files[0]);
-            return new Promise<void>((resolve) => {
-                fileReader.onload = () => {
-                    setViewAvatar(fileReader.result);
-                    resolve();
-                };
-            });
-        };
+        // if (name === 'avatar' && files && files.length > 0) {
+        //     setselectedFile(files[0])
+        //     fileReader.readAsDataURL(files[0]);
+        //     return new Promise<void>((resolve) => {
+        //         fileReader.onload = () => {
+        //             setViewAvatar(fileReader.result);
+        //             resolve();
+        //         };
+        //     });
+        // };
         if (name === 'name') {
             setAuthData(current => ({
                 ...current,
@@ -81,7 +80,7 @@ const useAuthChange = ()=>{
 
         }
     }
-    return{
+    return {
         authData,
         selectedFile,
         viewAvatar,

@@ -1,15 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { VideosData } from "../../store/videosSlice";
 import "./css/index.css";
-type Props = {
-    videos: VideosData[] | null;
-}
-const VideoLists = ({ videos }: Props) => {
+
+const VideoLists = () => {
     const navigate = useNavigate();
     return (
         <div className="video-lists-wrapper">
             <div className="video-detail-wrapper">
-                {videos?.map((item, idx) => (
+                {/* {videos?.map((item, idx) => (
                     <div className="detail-box" key={idx} onClick={() => navigate(`/video/${item._id}`, { state: { value: item } })}>
                         <video className="video" src={`http://localhost:4000/${item.videoUrl}`} />
                         <div className="content-wrapper">
@@ -23,14 +21,9 @@ const VideoLists = ({ videos }: Props) => {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="source">{ }</div> */}
-                            <div >
-                                {/* 조회수, 날짜데이터 작업해야함 */}
-
-                            </div>
                         </div>
                     </div>
-                ))}
+                ))} */}
             </div>
         </div>
     )

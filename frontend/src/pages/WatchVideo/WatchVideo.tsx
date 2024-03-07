@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { AuthData } from "../../store/authSlice";
+// import { AuthData } from "../../store/authSlice";
 import { Link, useLocation, useParams } from "react-router-dom";
 import "./css/index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,13 +7,13 @@ import { faPlay, faExpand, faVolumeLow, faPause, faVolumeXmark } from '@fortawes
 
 
 type Props = {
-    data: AuthData | null;
-    loading: boolean;
+    // data: AuthData | null;
+    // loading: boolean;
 }
 type VideoPlay = {
-    volumn: boolean,
-    play: boolean;
-    screen: boolean;
+    // volumn: boolean,
+    // play: boolean;
+    // screen: boolean;
 }
 const WatchVideo = ({
 }: Props) => {
@@ -145,16 +145,16 @@ const WatchVideo = ({
             <section className="watch-video-section">
                 <div className="video-wrapper">
                     <div className="video-container" ref={videoContainerRef}>
-                        <video
+                        {/* <video
                             ref={videoRef}
                             className={`video ${videoPlaying.screen && 'video-fullscreen'}`}
                             src={`http://localhost:4000/${videoUrl}`}
-                        />
+                        /> */}
                         <div className="video-time">
                             <div className="current-time">{videoCurrentTime}</div>
                             <div className="total-time">  / {videoTotalTime}</div>
                         </div>
-                        <div className={`video-controller ${videoPlaying.screen && 'fullscreen-controller'}`}>
+                        {/* <div className={`video-controller ${videoPlaying.screen && 'fullscreen-controller'}`}>
                             <button
                                 className="video-play-btn"
                                 onClick={videoClickHandler}
@@ -173,7 +173,7 @@ const WatchVideo = ({
 
                             <div className="screen-btn-wrapper">
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="video-info">
                         <div className="video-title">{title}</div>

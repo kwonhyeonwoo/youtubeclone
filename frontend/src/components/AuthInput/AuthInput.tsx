@@ -1,26 +1,24 @@
 import React, { Fragment } from "react";
 import "./css/index.css";
-import { AuthData } from "../../store/authSlice";
 
-type Props ={
-    input:{
-        id?:string;
-        name:string;
-        type:string;
-        required:boolean;
-        minLength?:number;
-        maxLength?:number;
-        value?:string;
+type Props = {
+    input: {
+        id?: string;
+        name: string;
+        type: string;
+        required: boolean;
+        minLength?: number;
+        maxLength?: number;
+        value?: string;
     }[];
-    data? : AuthData | null;
     ChangeData: (event: React.ChangeEvent<HTMLInputElement>) => void;
 
 }
 
-const AuthInput = ({ input, ChangeData, data }:Props)=>{
-    return(
-       <Fragment>
-            {input.map(({ id, name, type, required, maxLength, minLength,value }, idx) => (
+const AuthInput = ({ input, ChangeData }: Props) => {
+    return (
+        <Fragment>
+            {input.map(({ id, name, type, required, maxLength, minLength, value }, idx) => (
                 <input
                     className="auth-input"
                     id={id}
@@ -34,7 +32,7 @@ const AuthInput = ({ input, ChangeData, data }:Props)=>{
                     defaultValue={value}
                     onChange={ChangeData}
                 />
-        ))}
+            ))}
         </Fragment>
     )
 }

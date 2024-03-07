@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { AuthData } from '../../store/authSlice';
 import "./css/index.css";
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
-    data: AuthData | null;
-    error: string | null;
-    loading: boolean;
+    // data: AuthData | null;
+    // error: string | null;
+    // loading: boolean;
 }
 const Profile = ({
-    data,
-    error,
-    loading
+    // data,
+    // error,
+    // loading
 }: Props) => {
     const [ellipsisClick, setEllipsisClick] = useState(null);
     const EllipsisClick = (id: any) => setEllipsisClick(prev => prev === id ? null : id);
@@ -32,18 +31,18 @@ const Profile = ({
         <main className='profile-page'>
             <section className='profile-section'>
                 <div className='user-profile-wrapper'>
-                    <img className='user-avatar' src={`http://localhost:4000/${data?.avatar}`} alt="profile-img" />
+                    {/* <img className='user-avatar' src={`http://localhost:4000/${data?.avatar}`} alt="profile-img" /> */}
                     <div className='user-info'>
-                        <div className='user-name'>{data?.name}</div>
+                        {/* <div className='user-name'>{data?.name}</div>
                         <div className='user-nickname'>@{data?.nickName}</div>
-                        <div className='info-edit-link'><Link to={`/${data?._id}/profile/edit`}>정보수정 &rarr;</Link></div>
+                        <div className='info-edit-link'><Link to={`/${data?._id}/profile/edit`}>정보수정 &rarr;</Link></div> */}
                     </div>
                 </div>
 
                 <div className='user-videos-wrapper'>
                     <h2 className='videos-title'>내 비디오</h2>
                     <div className='videos-wrapper'>
-                        {data?.videos && data?.videos?.length > 0 ? data?.videos?.map((item, idx) => (
+                        {/* {data?.videos && data?.videos?.length > 0 ? data?.videos?.map((item, idx) => (
                             <div className='video-container' key={idx}>
                                 <video className='video' src={`http://localhost:4000/${item.videoUrl}`} />
                                 <div className='video-info'>
@@ -66,7 +65,7 @@ const Profile = ({
                         )) :
                             <div className='no-video'>등록 된 비디오가 없습니다</div>
 
-                        }
+                        } */}
 
                     </div>
                 </div>

@@ -4,11 +4,11 @@ import { RootState } from "../../../store";
 import { useParams } from "react-router-dom";
 
 const WatchVideoContainer = () => {
-    const { data, loading, error } = useSelector((state: RootState) => state.getAuth);
+    // const { data, loading, error } = useSelector((state: RootState) => state.getAuth);
 
     return <WatchVideo
-        data={data}
-        loading={loading}
+    // data={data}
+    // loading={loading}
     />
 }
 

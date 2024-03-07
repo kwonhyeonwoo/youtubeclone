@@ -8,13 +8,9 @@ type Props = {
 
 }
 const VideoListsContainer = ({ }: Props) => {
-    const dispatch: AppDispatch = useDispatch();
-    const { data, error, loading } = useSelector((state: RootState) => state.getVideos);
-    useEffect(() => {
-        dispatch(videosData());
-    }, [dispatch]);
+
     return (
-        <VideoLists videos={data} />
+        <VideoLists />
     )
 }
 

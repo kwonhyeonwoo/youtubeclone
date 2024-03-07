@@ -3,35 +3,33 @@ import "./css/index.css";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faFilm, faUser } from '@fortawesome/free-solid-svg-icons';
-import { AuthData } from '../../store/authSlice';
 type Props = {
-    data: AuthData | null;
 }
-const Sidebar = ({ data }: Props) => {
-    const sidebarArr = [
-        {
-            svg: <div className='channel-wrapper'>
-                <FontAwesomeIcon icon={faUser} />
-            </div>,
-            title: "내 채널",
-            link: "/chanel",
-        },
-        {
-            svg: <FontAwesomeIcon icon={faHeart} />,
-            title: "인기순 동영상",
-            link: "/video/best",
-        },
-        {
-            svg: <FontAwesomeIcon icon={faFilm} />,
-            title: "내 동영상",
-            link: `/${data?._id}/profile`,
-        },
-        {
-            svg: <FontAwesomeIcon icon={faFilm} />,
-            title: "영상 업로드",
-            link: "/video/upload",
-        },
-    ]
+const Sidebar = ({ }: Props) => {
+    // const sidebarArr = [
+    //     {
+    //         svg: <div className='channel-wrapper'>
+    //             <FontAwesomeIcon icon={faUser} />
+    //         </div>,
+    //         title: "내 채널",
+    //         link: "/chanel",
+    //     },
+    //     {
+    //         svg: <FontAwesomeIcon icon={faHeart} />,
+    //         title: "인기순 동영상",
+    //         link: "/video/best",
+    //     },
+    //     {
+    //         svg: <FontAwesomeIcon icon={faFilm} />,
+    //         title: "내 동영상",
+    //         link: `/${data?._id}/profile`,
+    //     },
+    //     {
+    //         svg: <FontAwesomeIcon icon={faFilm} />,
+    //         title: "영상 업로드",
+    //         link: "/video/upload",
+    //     },
+    // ]
     return (
         <div className='sidebar-wrapper'>
             <div className='container'>
@@ -39,14 +37,14 @@ const Sidebar = ({ data }: Props) => {
                     <div className='menu-wrapper'>
                         <div className='title'>나 {">"}</div>
                         <ul className='menu-lists'>
-                            {sidebarArr.map((item, idx) => (
+                            {/* {sidebarArr.map((item, idx) => (
                                 <li className='menu-list' key={idx}>
                                     {item.svg}
                                     <Link to={item.link}>
                                         {item.title}
                                     </Link>
                                 </li>
-                            ))}
+                            ))} */}
                         </ul>
                     </div>
                     <div className='menu-wrapper'>

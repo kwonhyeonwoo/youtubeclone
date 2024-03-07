@@ -17,7 +17,7 @@ const Account = ({
     ChangeData,
     AccountSubmit,
     isError,
-    viewAvatar,
+    // viewAvatar,
 }: Props) => {
     return (
         <main className='account-page'>
@@ -26,7 +26,7 @@ const Account = ({
                 <div className='account-info-wrapper'>
                     <form className='input-wrapper' encType='multipart/form-data'>
                         <label className='profile-img-choice' htmlFor="avatar">
-                            {viewAvatar ? <img src={viewAvatar} /> : <FontAwesomeIcon icon={faCamera} />}
+                            {/* {viewAvatar ? <img src={viewAvatar} /> : <FontAwesomeIcon icon={faCamera} />} */}
                         </label>
                         {accountArr.map((item, idx) => (
                             <Fragment>
