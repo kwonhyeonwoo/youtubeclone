@@ -2,37 +2,37 @@ import React, { Fragment } from 'react';
 import "./css/index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import AuthInput from '../../components/AuthInput/AuthInput';
+import AuthBtn from '../../components/AuthBtn/AuthBtn';
 
 type Props = {
-
+    AccountSubmit: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    ChangeData: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 const Account = ({
-
+    AccountSubmit,
+    ChangeData
 }: Props) => {
     return (
         <main className='account-page'>
             <section className='account-section'>
-                <h1 className='title'>회원가입</h1>
-                <div className='account-info-wrapper'>
-                    <form className='input-wrapper' encType='multipart/form-data'>
-                        <label className='profile-img-choice' htmlFor="avatar">
-                            {/* {viewAvatar ? <img src={viewAvatar} /> : <FontAwesomeIcon icon={faCamera} />} */}
-                        </label>
-                        {accountArr.map((item, idx) => (
-                            <Fragment>
-                                <input
-                                    id={item.id}
-                                    key={idx}
-                                    name={item.name}
-                                    type={item.type}
-                                    minLength={item.minLength}
-                                    maxLength={item.maxLength}
-                                    placeholder={item.placeholder}
-                                />
-                            </Fragment>
-                        ))}
-                        <button className='account-button' >회원가입</button>
+                {/* <h1 className='title'>회원가입</h1> */}
+                <div className='account-wrapper'>
+                    <form className='form-wrapper' encType='multipart/form-data'>
+                        {accountArr.map(({ id, type, placeholder, minLength, maxLength, name }, idx) => (
+                            <AuthInput
+                                id={id}
+                                type={type}
+                                key={idx}
+                                placeholder={placeholder}
+                                minLength={minLength}
+                                maxLength={maxLength}
+                                name={name}
+                                ChangeData={ChangeData}
 
+                            />
+                        ))}
+                        <AuthBtn name="회원가입" AccountSubmit={AccountSubmit} />
                     </form>
                 </div>
             </section>
@@ -81,6 +81,6 @@ const accountArr = [
         type: "password",
         minLength: 8,
         maxLength: 9,
-        placeholder: "비밀번호 확인"
+        placeholder: "비밀번호 체크"
     }
 ]

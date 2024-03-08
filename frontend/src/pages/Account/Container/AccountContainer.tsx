@@ -11,8 +11,26 @@ type Account = {
 }
 
 const AccountContainer = () => {
+    const [data, setData] = useState<Account>({
+        name: '',
+        nickName: '',
+        email: '',
+        password: '',
+        passwordCheck: ''
+    })
+    const ChangeData = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value, name } = event.target;
+        setData((current) => ({
+            ...current,
+            [name]: value
+        }));
+    }
+    const AuthSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
 
+    }
     return <Account
+        AccountSubmit={AuthSubmit}
+        ChangeData={ChangeData}
 
     />
 };

@@ -5,7 +5,6 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  background-color: black;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -26,12 +25,11 @@ section {
 body {
   height: 100%;
   padding: 150px 20px 0px 230px;
-  color: white;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 ol,

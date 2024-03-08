@@ -22,13 +22,9 @@
                 &>.menu-svg {
                     width: 27px;
                     height: 27px;
-                    color: white;
                     cursor: pointer;
 
-                    &:hover {
-
-                        color: rgba(255, 255, 255, 0.5);
-                    }
+                    &:hover {}
 
                 }
 
@@ -47,7 +43,8 @@
                         &>.title {
                             font-size: 17px;
                             font-weight: 700;
-                            color: white;
+                            // color: white;
+
                         }
                     }
 
@@ -63,9 +60,8 @@
                 &>.search-input {
                     width: 350px;
                     height: 38px;
-                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border: 1px solid rgba(0, 0, 0, 0.3);
                     border-radius: 20px;
-                    color: white;
                     padding-left: 12px;
                     font-size: 15px;
                     outline: none;
@@ -74,8 +70,8 @@
                 &>.glass-svg {
                     position: absolute;
                     top: 10px;
+                    color: rgba(0, 0, 0, 0.3);
                     right: 12px;
-                    color: white;
                 }
             }
 

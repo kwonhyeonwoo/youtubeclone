@@ -1,39 +1,45 @@
 import React, { Fragment } from "react";
 import "./css/index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
-    input: {
-        id?: string;
-        name: string;
-        type: string;
-        required: boolean;
-        minLength?: number;
-        maxLength?: number;
-        value?: string;
-    }[];
+    id?: string;
+    type: string;
+    placeholder: string;
+    minLength?: number;
+    maxLength?: number;
+    name?: string;
     ChangeData: (event: React.ChangeEvent<HTMLInputElement>) => void;
 
 }
 
-const AuthInput = ({ input, ChangeData }: Props) => {
+const AuthInput = ({
+    id,
+    type,
+    placeholder,
+    minLength,
+    maxLength,
+    name,
+    ChangeData
+}: Props) => {
     return (
-        <Fragment>
-            {input.map(({ id, name, type, required, maxLength, minLength, value }, idx) => (
-                <input
-                    className="auth-input"
-                    id={id}
-                    name={name}
-                    type={type}
-                    required={required}
-                    maxLength={maxLength}
-                    minLength={minLength}
-                    key={idx}
-                    placeholder={name}
-                    defaultValue={value}
-                    onChange={ChangeData}
-                />
-            ))}
-        </Fragment>
+        <div className="input-wrapper">
+            {placeholder &&
+                <div className="input-name">{placeholder}</div>
+            }
+            {name === 'avatar' && <label className='profile-image' htmlFor="avatar"> <FontAwesomeIcon icon={faCamera} /></label>}
+            <input
+                className="auth-input"
+                id={id}
+                type={type}
+                placeholder={placeholder}
+                minLength={minLength}
+                maxLength={maxLength}
+                name={name}
+                onChange={ChangeData}
+            />
+        </div>
     )
 }
 export default AuthInput;

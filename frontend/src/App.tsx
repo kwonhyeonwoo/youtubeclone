@@ -16,8 +16,8 @@ function App() {
       <SidebarContainer />
       <Routes>
         <Route path="/" element={<HomeContainer />} />
-        <Route path="/login" element={<LoginContainer />} />
-        <Route path="/account" element={<AccountContainer />} />
+        <Route path="/signin" element={<LoginContainer />} />
+        <Route path="/signup" element={<AccountContainer />} />
         <Route path="/:id/profile" element={<ProfileContainer />} />
         <Route path="/:id/profile/edit" element={<AuthEditContainer />} />
 

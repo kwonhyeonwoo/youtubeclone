@@ -1,10 +1,54 @@
-#root .auth-input {
-  border: 2px solid grey;
-  padding: 5px;
+#root .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 19px;
+     -moz-column-gap: 19px;
+          column-gap: 19px;
+  border-bottom: 1px solid rgb(220, 224, 229);
+  height: 80px;
+  -webkit-column-gap: 11px;
+     -moz-column-gap: 11px;
+          column-gap: 11px;
+}
+#root .input-wrapper > .profile-image {
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgb(220, 224, 229);
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#root .input-wrapper > .profile-image svg {
+  font-size: 25px;
+  color: rgb(220, 224, 229);
+}
+#root .input-wrapper > .input-name {
+  font-size: 18px;
+  font-weight: 500;
+  width: 140px;
+}
+#root .input-wrapper > .auth-input[type=file] {
+  display: none;
+}
+#root .input-wrapper > .auth-input {
+  width: 100%;
+  border: 1px solid rgb(220, 224, 229);
+  height: 45px;
+  padding-left: 12px;
+  border-radius: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 8px;
-  color: white;
-  width: 350px;
-  height: 50px;
 }

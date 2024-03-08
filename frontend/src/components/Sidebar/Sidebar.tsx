@@ -6,30 +6,7 @@ import { faHeart, faFilm, faUser } from '@fortawesome/free-solid-svg-icons';
 type Props = {
 }
 const Sidebar = ({ }: Props) => {
-    // const sidebarArr = [
-    //     {
-    //         svg: <div className='channel-wrapper'>
-    //             <FontAwesomeIcon icon={faUser} />
-    //         </div>,
-    //         title: "내 채널",
-    //         link: "/chanel",
-    //     },
-    //     {
-    //         svg: <FontAwesomeIcon icon={faHeart} />,
-    //         title: "인기순 동영상",
-    //         link: "/video/best",
-    //     },
-    //     {
-    //         svg: <FontAwesomeIcon icon={faFilm} />,
-    //         title: "내 동영상",
-    //         link: `/${data?._id}/profile`,
-    //     },
-    //     {
-    //         svg: <FontAwesomeIcon icon={faFilm} />,
-    //         title: "영상 업로드",
-    //         link: "/video/upload",
-    //     },
-    // ]
+
     return (
         <div className='sidebar-wrapper'>
             <div className='container'>

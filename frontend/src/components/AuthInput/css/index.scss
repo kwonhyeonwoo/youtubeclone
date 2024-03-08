@@ -1,12 +1,49 @@
-#root{
-    .auth-input{
-        border:2px solid grey;
-        padding:5px;
-        box-sizing:border-box;
-        border-radius: 8px;
-        color:white;
-        width: 350px;;
-        height:50px;
+#root {
+
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 19px;
+        border-bottom: 1px solid rgba(220, 224, 229, 1);
+        height: 80px;
+        column-gap: 11px;
+
+        &>.profile-image {
+            width: 80px;
+            height: 80px;
+            border: 1px solid rgba(220, 224, 229, 1);
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                font-size: 25px;
+                color: rgba(220, 224, 229, 8);
+            }
+        }
+
+        &>.input-name {
+            font-size: 18px;
+            font-weight: 500;
+            width: 140px;
+        }
+
+        &>.auth-input[type=file] {
+            display: none;
+        }
+
+        &>.auth-input {
+            width: 100%;
+            border: 1px solid rgba(220, 224, 229, 1);
+            height: 45px;
+            padding-left: 12px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
     }
-    
+
 }
